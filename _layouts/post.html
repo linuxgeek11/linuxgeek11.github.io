@@ -1,0 +1,26 @@
+---
+layout: grid
+---
+
+<article>
+  <h1>{{ page.title }}</h1>
+
+  <p class="tagline">{{ page.tagline }}</p>
+
+  {% if page.toc %}
+      {% toc %}
+  {% endif %}
+
+  {{ content }}
+
+  <hr>
+
+  <time>Published: {{ page.date | date: "%Y-%m-%d" }}</time>
+  {% if page.tags %}
+  <div class="tags-block">
+    {% for item in page.tags %}
+      <div class="tag" rel="tag">{{ item }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>

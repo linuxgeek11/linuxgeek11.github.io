@@ -1,0 +1,78 @@
+.container {
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.content {
+  padding: 15px 20px;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+}
+
+footer {
+  background-color: #eee;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+}
+
+footer > .content,
+header > .content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer > .content > * {
+  margin-right: 7px;
+}
+
+footer img {
+  max-width: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-family: 'Fira Code', monospace;
+}
+
+.logo img {
+  max-width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+.logo a,
+nav a {
+  text-decoration: none;
+  color: #fff;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}—{{ site.title }}</title>
+  <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <script defer src="{{ "/assets/js/init.js" | relative_url }}"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700|Fira+Code:400,700" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="content">
+        <div class="logo">
+          <a href="{{ site.url }}"><img src="{{ "/assets/images/theme/tux.svg" | relative_url }}" alt="Logo">{{ site.title }}</a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="{{ site.url }}">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        {{ content }}
+      </div>
+    </main>
+    <footer>
+      <div class="content"><span class="copyright">&copy 2023 linuxgeek.</span><a href="https://github.com/linuxgeek11"><img src="/assets/images/theme/github-mark.svg" alt="GitHub"></a></div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+$backgroundColor: #ffffff;
+$bodyColor: #000000;
+$bodyFont: 'Nunito Sans',sans-serif;
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: $bodyFont;
+    font-weight: 700;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #bbb;
+}
+
+.tags-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tag {
+  background-color: #333;
+  color: #fff;
+  padding: 4px 7px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+article time {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+article .tagline {
+  overflow-x: hidden;
+  font-size: larger;
+  color: #333;
+}
+
+ul.toc {
+  list-style-type: none;
+  padding: 0;
+}

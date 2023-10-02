@@ -1,0 +1,25 @@
+@media (min-width: 450px) {
+  .lb img {
+    max-width: 55%;
+  }
+}
+
+@media (min-width: 720px) {
+  .content {
+    max-width: 80%;
+  }
+
+  .lb img {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 900px) {
+  .content {
+    max-width: 50%;
+  }
+
+  .lb img {
+    max-width: 35%;
+  }
+}

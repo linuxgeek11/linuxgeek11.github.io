@@ -1,0 +1,12 @@
+url: "https://linuxgeek11.github.io"
+baseurl: ""
+title: "linuxgeek Tech Notes"
+
+plugins:
+  - jekyll-toc
+
+toc:
+  min_level: 1
+  max_level: 2
+  list_class: toc
+  sublist_class: toc-sublist
