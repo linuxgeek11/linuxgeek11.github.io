@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}—{{ site.title }}</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MCLDLLBM');</script>
+  <!-- End Google Tag Manager -->
   <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
@@ -11,6 +18,9 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700|Fira+Code:400,700" rel="stylesheet">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCLDLLBM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div class="container">
     <header>
       <div class="content">
@@ -31,7 +41,7 @@
       </div>
     </main>
     <footer>
-      <div class="content"><span class="copyright">&copy 2023 linuxgeek.</span><a href="https://github.com/linuxgeek11"><img src="/assets/images/theme/github-mark.svg" alt="GitHub"></a></div>
+      <div class="content"><span class="copyright">&copy 2023 linuxgeek.</span><a href="{{ site.github.owner_url }}"><img src="/assets/images/theme/github-mark.svg" alt="GitHub"></a></div>
     </footer>
   </div>
 </body>
