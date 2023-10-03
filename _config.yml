@@ -4,9 +4,12 @@ title: "linuxgeek Tech Notes"
 
 plugins:
   - jekyll-toc
+  - jekyll-github-metadata
 
 toc:
   min_level: 1
   max_level: 2
   list_class: toc
   sublist_class: toc-sublist
+
+repository: linuxgeek11/linuxgeek11.github.io
