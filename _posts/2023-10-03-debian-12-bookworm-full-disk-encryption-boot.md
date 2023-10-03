@@ -35,55 +35,55 @@ I won't describe all the installation steps since everything is quite self-expla
 
 Detect disks:
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/01.png" class="lb"><img src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/01.png" alt="Detect disks"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/01.png" class="lb"><img loading="lazy" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/01.png" alt="Detect disks"></a>
 
 Open partition disks menu:
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/02.png" class="lb"><img src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/02.png" alt="Partition disks"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/02.png" class="lb"><img loading="lazy" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/02.png" alt="Partition disks"></a>
 
 Select 'Manual':
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/03.png" class="lb"><img alt="Manual disks partition" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/03.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/03.png" class="lb"><img loading="lazy" alt="Manual disks partition" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/03.png"></a>
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/04.png" class="lb"><img alt="Disks partition menu" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/04.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/04.png" class="lb"><img loading="lazy" alt="Disks partition menu" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/04.png"></a>
 
 Let's suppose the disk we will use for installation is `/dev/sda`. If you are using a different disk, please replace `/dev/sda` with your actual drive.
 
 Select `/dev/sda` and create a new `GPT` partition table on it.
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/05.png" class="lb"><img alt="Create new partition table" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/05.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/05.png" class="lb"><img loading="lazy" alt="Create new partition table" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/05.png"></a>
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/06.png" class="lb"><img alt="Create new partition table" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/06.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/06.png" class="lb"><img loading="lazy" alt="Create new partition table" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/06.png"></a>
 
 Next, create a small EFI partition at the beginning of the drive, with a size of up to 500MB to support UEFI boot.
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/07.png" class="lb"><img alt="EFI partition" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/07.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/07.png" class="lb"><img loading="lazy" alt="EFI partition" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/07.png"></a>
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/08.png" class="lb"><img alt="EFI partition" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/08.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/08.png" class="lb"><img loading="lazy" alt="EFI partition" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/08.png"></a>
 
 Now, let's create an encrypted volume using all the remaining free space. This includes encrypting `/boot`, which will also reside on LVM.
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/09.png" class="lb"><img alt="Encrypted volume" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/09.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/09.png" class="lb"><img loading="lazy" alt="Encrypted volume" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/09.png"></a>
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/10.png" class="lb"><img alt="Encrypted volume selection" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/10.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/10.png" class="lb"><img loading="lazy" alt="Encrypted volume selection" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/10.png"></a>
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/11.png" class="lb"><img alt="Encrypted volume settings" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/11.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/11.png" class="lb"><img loading="lazy" alt="Encrypted volume settings" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/11.png"></a>
 
 Apply the changes and wait for a moment while the installer erases the drive before proceeding with encryption. You will be prompted to enter a passphrase during this process.
 
 Time to configure LVM.
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/12.png" class="lb"><img alt="LVM" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/12.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/12.png" class="lb"><img loading="lazy" alt="LVM" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/12.png"></a>
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/13.png" class="lb"><img alt="Create volume group" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/13.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/13.png" class="lb"><img loading="lazy" alt="Create volume group" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/13.png"></a>
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/14-0.png" class="lb"><img alt="Select encrypted partition for volume group" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/14-0.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/14-0.png" class="lb"><img loading="lazy" alt="Select encrypted partition for volume group" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/14-0.png"></a>
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/14-1.png" class="lb"><img alt="Set volume group name" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/14-1.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/14-1.png" class="lb"><img loading="lazy" alt="Set volume group name" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/14-1.png"></a>
 
 Create logical volumes.
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/15.png" class="lb"><img alt="Set up logical volumes" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/15.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/15.png" class="lb"><img loading="lazy" alt="Set up logical volumes" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/15.png"></a>
 
 You can customize the configuration to suit your specific needs. For my setup, I created the following logical volumes:
 
@@ -95,7 +95,7 @@ You can customize the configuration to suit your specific needs. For my setup, I
 
 As a result, my disk configuration looks like this:
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/16.png" class="lb"><img alt="Set up logical volumes" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/16.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/16.png" class="lb"><img loading="lazy" alt="Set up logical volumes" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/16.png"></a>
 
 If everything appears to be in order, write the changes to the disk.
 
@@ -105,11 +105,11 @@ Proceed to install the base system, configure APT, and install the required pack
 
 **Do not** install GRUB from the installation menu. You will encounter an error in any case:
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/18.png" class="lb"><img alt="GRUB installation error" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/18.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/18.png" class="lb"><img loading="lazy" alt="GRUB installation error" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/18.png"></a>
 
 Also, please note that installing GRUB may potentially lead to UEFI boot errors. To avoid this, simply skip the GRUB installation step and select 'Execute a shell' from the installer menu:
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/19.png" class="lb"><img alt="Execute a shell" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/19.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/19.png" class="lb"><img loading="lazy" alt="Execute a shell" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/19.png"></a>
 
 ## Chroot into the Installed System
 
@@ -197,7 +197,7 @@ Some people have suggested that LUKS v2 is not supported by the current version 
 
 During the installation, the installer will prompt you about the bootloader. Select 'Continue without bootloader' and confirm this choice since you've already installed it.
 
-<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/20.png" class="lb"><img alt="Continue without bootloader" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/20.png"></a>
+<a href="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/20.png" class="lb"><img loading="lazy" alt="Continue without bootloader" src="/assets/images/posts/2023-10-03-debian-12-bookworm-full-disk-encryption-boot/20.png"></a>
 
 Then reboot and load your freshly installed operating system. During the first boot, you will need to enter your password twice.
 
@@ -288,8 +288,8 @@ That's it. After rebooting, you will only need to enter your password once.
 
 References:
 
-* <https://www.pavelkogan.com/2014/05/23/luks-full-disk-encryption/>
-* <https://www.dwarmstrong.org/fde-debian/>
-* <https://cryptsetup-team.pages.debian.net/cryptsetup/encrypted-boot.html>
-* <https://superuser.com/questions/1536669/grub-bootloader-with-root-luks-encryption-only-grub-shell>
-* <https://unix.stackexchange.com/questions/96977/grub-probe-error-failed-to-get-canonical-path-of-cow>
+* [Full disk encryption with LUKS (including /boot)](https://www.pavelkogan.com/2014/05/23/luks-full-disk-encryption/)
+* [Full disk encryption (including boot) on Debian Bookworm](https://www.dwarmstrong.org/fde-debian/)
+* [Full disk encryption, including /boot: Unlocking LUKS devices from GRUB](https://cryptsetup-team.pages.debian.net/cryptsetup/encrypted-boot.html)
+* [GRUB Bootloader with root LUKS encryption: only grub shell](https://superuser.com/questions/1536669/grub-bootloader-with-root-luks-encryption-only-grub-shell)
+* [grub-probe: error: failed to get canonical path of /cow](https://unix.stackexchange.com/questions/96977/grub-probe-error-failed-to-get-canonical-path-of-cow)
