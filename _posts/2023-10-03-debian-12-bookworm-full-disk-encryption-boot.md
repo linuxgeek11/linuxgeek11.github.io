@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Debian 12 Bookworm Full Disk Encryption Including Boot with LVM"
+title: "Full Disk Encryption in Debian 12 Bookworm, Including Boot with LVM"
 tagline: "No-nonsense step-by-step guide to Debian 12 Bookworm full disk encryption with LVM."
 toc: true
 tags:
