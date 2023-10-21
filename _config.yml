@@ -5,6 +5,7 @@ title: "linuxgeek Tech Notes"
 plugins:
   - jekyll-toc
   - jekyll-github-metadata
+  - jekyll-seo-tag
 
 toc:
   min_level: 1
@@ -13,3 +14,7 @@ toc:
   sublist_class: toc-sublist
 
 repository: linuxgeek11/linuxgeek11.github.io
+
+author:
+  name: linuxgeek
+  url: https://github.com/linuxgeek11

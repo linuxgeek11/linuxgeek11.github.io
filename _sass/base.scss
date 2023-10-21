@@ -54,3 +54,10 @@ ul.toc {
   list-style-type: none;
   padding: 0;
 }
+
+blockquote {
+  font-style: oblique;
+  border-left: 10px solid rgba(0, 0, 0, 0.1);
+  padding-left: 10px;
+  margin-left: 5px;
+}

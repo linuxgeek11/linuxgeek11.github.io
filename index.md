@@ -8,7 +8,7 @@ title: "linuxgeek Tech Notes"
 <div>
   {% for post in site.posts %}
     <p>
-      <a href="{{ post.url }}">{{ post.title }}.</a> {{ post.tagline }}
+      <a href="{{ post.url }}">{{ post.title }}.</a> {{ post.description }}
     </p>
   {% endfor %}
 </div>
