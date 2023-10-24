@@ -7,7 +7,7 @@ tags:
   - Debian
   - Debian 12 Bookworm
   - libvirt
-  - serial console
+  - Serial console
 ---
 
 ## Installation

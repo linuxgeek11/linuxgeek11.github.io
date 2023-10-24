@@ -5,4 +5,6 @@ group :jekyll_plugins do
   gem "jekyll"
   gem "jekyll-toc"
   gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-feed"
 end

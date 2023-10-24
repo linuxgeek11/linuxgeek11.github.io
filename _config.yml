@@ -6,6 +6,8 @@ plugins:
   - jekyll-toc
   - jekyll-github-metadata
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
 toc:
   min_level: 1

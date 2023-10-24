@@ -9,7 +9,7 @@ tags:
   - Encryption
   - LUKS
   - LVM
-  - boot
+  - Boot
   - UEFI
 ---
 
