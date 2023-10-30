@@ -50,9 +50,14 @@ article .tagline {
   color: #333;
 }
 
-ul.toc {
+ul.toc, ul.toc-sublist {
   list-style-type: none;
   padding: 0;
+}
+
+ul.toc-sublist {
+  font-size: small;
+  padding-left: 10px;
 }
 
 blockquote {

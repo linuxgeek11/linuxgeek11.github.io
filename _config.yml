@@ -11,7 +11,7 @@ plugins:
 
 toc:
   min_level: 1
-  max_level: 2
+  max_level: 3
   list_class: toc
   sublist_class: toc-sublist
 

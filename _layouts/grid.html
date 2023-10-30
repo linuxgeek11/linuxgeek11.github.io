@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}—{{ site.title }}</title>
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="{{ '/assets/images/theme/favicon.svg' | relative_url }}">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,8 +15,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- End Google Tag Manager -->
   <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <script defer src="{{ "/assets/js/init.js" | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/init.js' | relative_url }}"></script>
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700|Fira+Code:400,700" rel="stylesheet">
   {% seo %}
   {% feed_meta %}
@@ -27,7 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <header>
       <div class="content">
         <div class="logo">
-          <a href="{{ site.url }}"><img src="{{ "/assets/images/theme/tux.svg" | relative_url }}" alt="Logo">{{ site.title }}</a>
+          <a href="{{ site.url }}"><img src="{{ '/assets/images/theme/tux.svg' | relative_url }}" alt="Logo">{{ site.title }}</a>
         </div>
         <nav>
           <ul>
@@ -43,7 +45,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </main>
     <footer>
-      <div class="content"><span class="copyright">&copy 2023 linuxgeek.</span><a href="{{ site.github.owner_url }}"><img src="/assets/images/theme/github-mark.svg" alt="GitHub"></a></div>
+      <div class="content"><span class="copyright">&copy 2023 linuxgeek.</span><a href="{{ site.github.owner_url }}"><img src="{{ '/assets/images/theme/github-mark.svg' | relative_url }}" alt="GitHub"></a></div>
     </footer>
   </div>
 </body>
