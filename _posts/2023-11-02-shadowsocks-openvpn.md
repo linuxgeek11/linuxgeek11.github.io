@@ -77,7 +77,7 @@ Create `/etc/shadowsocks-libev/<SERVER>.json` (replace placeholders in angle bra
   "server_port": 443,
   "local_address": "127.0.0.1",
   "local_port": 1080,
-  "mode": "udp_only",
+  "mode": "tcp_and_udp",
   "password": "<SHADOWSOCKS_PASSWORD>",
   "timeout": 60,
   "method": "chacha20-ietf-poly1305",
