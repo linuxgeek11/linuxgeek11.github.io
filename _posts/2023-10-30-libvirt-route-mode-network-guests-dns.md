@@ -118,11 +118,13 @@ Restart the guest.
 To facilitate communication between the virtual bridge `virbr1` and the host LAN interface `enp0s3`, you'll need to enable forwarding:
 
 ```shell
-sudo sysctl -w net.ipv4.ip_forward=1
-sudo iptables -A FORWARD -i virbr1 -o enp0s3 -j ACCEPT
+echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.d/99-sysctl.conf
+sudo sysctl -p
 ```
 
-Additionally, you should masquerade traffic passing through the LAN interface to ensure proper routing:
+When using the `route` mode network in libvirt, it automatically creates forwarding rules in iptables when the network starts. You don't need to configure these rules manually.
+
+Additionally, you should masquerade traffic passing through the LAN interface (or any other output interface you want to pass traffic through) to ensure proper routing:
 
 ```shell
 sudo iptables -t nat -A POSTROUTING -s 192.168.144.0/24 -o enp3s0 -j MASQUERADE
@@ -197,7 +199,7 @@ Name:   guest.loc
 Address: 192.168.144.2
 ```
 
-In a further article, I'll explore how to connect to the libvirt routed mode network via VPN & gain access to the guests connected to that network by DNS names.
+In a further post, I'll explore how to connect to the libvirt routed mode network via VPN & gain access to the guests connected to that network by DNS names.
 
 ---
 
