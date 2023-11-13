@@ -8,19 +8,19 @@ layout: grid
   <p class="tagline">{{ page.description }}</p>
 
   {% if page.toc %}
-      {% toc %}
+    {% toc %}
   {% endif %}
 
   {{ content }}
 
   <hr>
 
-  <time>Published: {{ page.date | date: "%Y-%m-%d" }}</time>
+  <time>Published: {{ page.date | date: "%b %-d, %Y" }}</time>
 
   {% if page.tags %}
     <div class="tags-block">
       {% for item in page.tags %}
-        <div class="tag" rel="tag">{{ item }}</div>
+        <a class="tag" rel="tag" href="/tag/{{ item | slugify: 'latin' }}">{{ item }}</a>
       {% endfor %}
     </div>
   {% endif %}

@@ -8,6 +8,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-archives
 
 toc:
   min_level: 1
@@ -20,3 +21,9 @@ repository: linuxgeek11/linuxgeek11.github.io
 author:
   name: linuxgeek
   url: https://github.com/linuxgeek11
+
+jekyll-archives:
+  enabled: [tags]
+  layout: 'tag'
+  permalinks:
+    tag: '/tag/:name/'

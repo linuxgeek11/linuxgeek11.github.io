@@ -13,8 +13,8 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: $bodyFont;
-    font-weight: 700;
+  font-family: $bodyFont;
+  font-weight: 700;
 }
 
 hr {
@@ -32,15 +32,24 @@ hr {
 .tag {
   background-color: #333;
   color: #fff;
-  padding: 4px 7px;
-  border-radius: 5px;
-  font-size: 12px;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 3px;
+  border: 2px solid #333;
+}
+
+.tag:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+.time {
+  font-size: smaller;
 }
 
 article time {
+  font-style: oblique;
   display: block;
-  font-size: 12px;
-  font-style: italic;
   margin-bottom: 10px;
 }
 

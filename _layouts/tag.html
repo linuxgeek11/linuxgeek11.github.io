@@ -1,0 +1,14 @@
+---
+layout: grid
+---
+
+<h1>Posts tagged with '{{ page.title }}'</h1>
+
+<div>
+  {% for post in page.posts %}
+    <p>
+      <span class="time">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </p>
+  {% endfor %}
+</div>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Setting Up Shadowsocks Server & Client for Routing OpenVPN Traffic"
+title: "Setting Up Shadowsocks Proxy Server & Client for Routing OpenVPN Traffic"
 description: "Bypass OpenVPN Blocks with Shadowsocks."
 toc: true
 tags:
@@ -8,6 +8,7 @@ tags:
   - Ubuntu
   - Linux
   - Shadowsocks
+  - Proxy
   - OpenVPN
   - VPN
   - Censorship
@@ -32,7 +33,7 @@ To configure Shadowsocks server, create a `config.json` file with the following 
 ```json
 {
   "server_port": 443,
-  "mode": "udp_only",
+  "mode": "tcp_and_udp",
   "password": "<SHADOWSOCKS_PASSWORD>",
   "timeout": 60,
   "method": "chacha20-ietf-poly1305",
@@ -48,6 +49,8 @@ sudo sysctl -p
 ```
 
 See [TCP fast open](https://github.com/shadowsocks/shadowsocks/wiki/TCP-Fast-Open) for details.
+
+If you don't want to use Shadowsocks proxy on mobile you may disable TCP server by setting: `"mode": "udp_only"`. But you still need TCP on a Linux client.
 
 Run Shadowsocks server:
 
@@ -143,3 +146,4 @@ References:
 * [TCP Fast Open](https://github.com/shadowsocks/shadowsocks/wiki/TCP-Fast-Open)
 * [Optimizing Shadowsocks](https://github.com/shadowsocks/shadowsocks/wiki/Optimizing-Shadowsocks)
 * [OpenVPN MTU: Finding The Correct Settings](https://www.thegeekpub.com/271035/openvpn-mtu-finding-the-correct-settings/)
+* [Android Shadowsocks client](https://play.google.com/store/apps/details?id=com.github.shadowsocks)
